@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let raceNumber = Math.floor(Math.random() * 1000);
+        let earlyRegister = confirm(`Did you early register?`);
+        let runnerAge = prompt(`What is your age?`);
+
+        if (earlyRegister) {
+            raceNumber += 1000;
+        } else {
+            raceNumber;
+        };
+
+        if (runnerAge >= 18) {
+            alert(`Your race number is ${raceNumber}. Your race starts at 9:30am!`)
+        } else if (runnerAge >= 18 || earlyRegister) {
+            alert(`Your race number is ${raceNumber}. Your race starts at 11:00 am!`);
+        } else if (runnerAge >= 18 && !earlyRegister) {
+            alert(`Your race number is ${raceNumber}. Your race starts at 12:30 pm!`);
+        } else {
+            alert(`Please fucking see the registration desk, fuck!`);
+        }
+    </script>
+
+</body>
+
+</html>
