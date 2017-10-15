@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //We are also able to create objects using constructor functions.
+
+        //A constructor function is given a capitalized name to make it clear that it is a constructor.
+
+        //Here's an example of a constructor function:
+
+        var Car = function () {
+            this.wheels = 4;
+            this.engines = 1;
+            this.seats = 5;
+        };
+
+        //In a constructor the this variable refers to the new object being created by the constructor.So when we write,
+
+        this.wheels = 4;
+
+        //inside of the constructor we are giving the new object it creates a property called wheels with a value of 4.
+
+        //You can think of a constructor as a description for the object it will create.
+
+        //Now let's put that great constructor function we made in the last lesson to use!
+
+        //To use a constructor function we call it with the new keyword in front of it like:
+
+        var myCar = new Car();
+
+        //myCar is now an instance of the Car constructor that looks like the object it described:
+
+        {
+            wheels: 4,
+                engines: 1,
+                    seats: 5
+        }
+        //Note that it is important to use the new keyword when calling a constructor.This is how Javascript knows to create a new object and that all the references to this inside the constructor should be referring to this new object.
+
+        //Now, once the myCar instance is created it can be used like any other object and can have its properties accessed and modified the same way you would usually.For example:
+
+        myCar.turboType = "twin";
+
+        //Our myCar variable now has a property turboType with a value of "twin".
+
+
+
+        //The constructor we have is great, but what if we don't always want to create the same object?
+
+        // To solve this we can add parameters to our constructor.We do this like the following example:
+
+        var Car = function (wheels, seats, engines) {
+            this.wheels = wheels;
+            this.seats = seats;
+            this.engines = engines;
+        };
+        //Now we can pass in arguments when we call our constructor.
+
+        var myCar = new Car(6, 3, 1);
+
+        //This code will create an object that uses the arguments we passed in and looks like:
+
+        {
+            wheels: 6,
+                seats: 3,
+                    engines: 1
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
